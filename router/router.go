@@ -1,8 +1,9 @@
 package router
 
 import (
-	"github.com/gin-gonic/gin"
 	"fmt"
+
+	"github.com/gin-gonic/gin"
 )
 
 func Initialize() {
