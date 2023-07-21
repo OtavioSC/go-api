@@ -1,11 +1,18 @@
 package router
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	"fmt"
+)
 
 func Initialize() {
 	router := gin.Default()
 	
 	initializeRoutes(router);
 
-	router.Run(":8080")
+	err := router.Run(":8080")
+
+	if err != nil {
+		fmt.Println("Error starting server:", err)
+	}
 }
